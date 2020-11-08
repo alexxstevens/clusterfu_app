@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<h2>Add Bookmark</h2>
+<div class="card card-body mb-3">
+  <form>
+    <!-- <form #bookmarkForm="ngForm" (ngSubmit)="onSubmit(userForm)"> -->
+    <div class="form-group">
+      <label>Title:</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="currentBookmark.title"
+        name="title"
+        #title
+        required
+        minlength="2"
+      />
+      <!-- <div [hidden]="!userFirstName.errors?.required" class="invalid-feedback">
+            Title is required.
+          </div> -->
+      <!-- <div [hidden]="!userFirstName.errors?.minlength" class="invalid-feedback">
+            First name must be a minimum of 2 characters.
+          </div> -->
+    </div>
+    <div class="form-group">
+      <label>Body:</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="currentBookmark.body"
+        name="body"
+        #body
+        required
+        minlength="2"
+      />
+      <!-- <div [hidden]="!userLastName.errors?.required" class="invalid-feedback">
+            Last name is required.
+          </div>
+          <div [hidden]="!userLastName.errors?.minlength" class="invalid-feedback">
+            Last name must be a minimum of 2 characters.
+          </div> -->
+    </div>
+    <input type="hidden" [(ngModel)]="currentBookmark.id" name="id" />
+
+    <button
+      *ngIf="!isEdit"
+      (click)="addBookmark(title.value, body.value)"
+      class="btn btn-dark btn-block mb-4"
+    >
+      Add Bookmark
+    </button>
+
+    <button
+      *ngIf="isEdit"
+      (click)="updateBookmark()"
+      class="btn btn-warning btn-block mb-4"
+    >
+      Update Bookmark
+    </button>
+  </form>
+</div>

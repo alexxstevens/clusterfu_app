@@ -1,0 +1,29 @@
+.navbar {
+  background-color: white;
+  border-bottom: 2px solid lightgrey;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+span.red {
+  color: red;
+}
+
+h1.inline {
+  display: inline;
+}
+
+img#bookmark_logo {
+  height: 35px;
+  width: 30px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+li a.nav-link {
+  color: black;
+}

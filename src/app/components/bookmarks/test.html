@@ -1,0 +1,21 @@
+<app-bookmark-form
+  [currentBookmark]="currentBookmark"
+  [isEdit]="isEdit"
+  (newBookmark)="onNewBookmark($event)"
+  (updatedBookmark)="onUpdatedBookmark($event)"
+></app-bookmark-form>
+<h2>Bookmarks</h2>
+<div class="card" *ngFor="let bookmark of bookmarks">
+  <div class="crd-body">
+    <h3>
+      <a routerLink="/bookmark/{{ bookmark.id }}">{{ bookmark.title }}</a>
+    </h3>
+    <p>{{ bookmark.body }}</p>
+    <button class="btn btn-danger">
+      <i class="fa fa-remove"></i>
+    </button>
+    <button (click)="editBookmark(bookmark)" class="btn btn-light">
+      <i class="fa fa-pencil"></i>
+    </button>
+  </div>
+</div>

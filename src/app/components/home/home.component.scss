@@ -1,0 +1,30 @@
+div.homPage {
+  position: absolute;
+  background-color: white;
+  margin: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  padding-top: 5%;
+  div#homeLogo {
+    text-align: center;
+    padding-top: 5%;
+    img#homePage {
+      width: 50%;
+    }
+  }
+  div#homeLogin {
+    text-align: right;
+    margin-right: 5%;
+    a {
+      font-weight: bold;
+      color: red;
+      text-decoration-color: black;
+      font-size: 1.5em;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

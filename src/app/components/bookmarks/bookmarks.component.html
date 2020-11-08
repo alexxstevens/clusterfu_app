@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<h1 id="heading" class="my-4 inline">
+  Mark's cluster<span class="red">fu</span>
+</h1>
+
+<div class="card">
+  <ul class="flex-container">
+    <li class="flex-item" *ngFor="let bookmark of bookmarks">
+      <div id="bookmarkHeader"></div>
+      <h5>
+        {{ bookmark.title }}
+        <!-- <a routerLink="/bookmark/{{ bookmark.id }}"></a><button class="btn btn-danger">
+            <i class="fa fa-remove"></i>
+          </button>
+          <button (click)="editBookmark(bookmark)" class="btn btn-light">
+            <i class="fa fa-pencil"></i>
+          </button> -->
+      </h5>
+    </li>
+  </ul>
+</div>
