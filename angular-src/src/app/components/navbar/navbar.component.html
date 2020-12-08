@@ -1,0 +1,59 @@
+<header>
+  <div class="row">
+    <div class="col center-block">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/images/bookmark.png"
+            id="bookmark_logo"
+            alt="clusterfu logo"
+          />
+          <h1 class="inline">cluster<span class="red">fu</span></h1></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a
+              class="nav-item nav-link"
+              [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLink="/login"
+              >login</a
+            >
+            <a
+              class="nav-item nav-link"
+              [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLink="/bookmarks"
+              >bookmarks</a
+            >
+            <a
+              class="nav-item nav-link"
+              [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLink="/users"
+              >register</a
+            >
+            <a
+              class="nav-item nav-link"
+              [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLink="/help"
+              >help</a
+            >
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

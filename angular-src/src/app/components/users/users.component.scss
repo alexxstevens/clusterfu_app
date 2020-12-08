@@ -1,0 +1,26 @@
+#heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  text-align: center;
+  color: red;
+}
+
+#users {
+  width: 60%;
+  margin-left: 20%;
+}
+
+div.btnContainer {
+  display: inline;
+  .icon {
+    display: inline-block;
+    float: right;
+  }
+}
+
+div.card {
+  width: 500px;
+}

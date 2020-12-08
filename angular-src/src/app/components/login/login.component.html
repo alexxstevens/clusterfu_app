@@ -1,0 +1,55 @@
+<app-navbar></app-navbar> <br /><br />>
+<div class="card card-body mx-auto mb-4">
+  <h2 class="title mb-2">Login</h2>
+  <form #userForm="ngForm">
+    <div class="form-group">
+      <label>Username: (email)</label>
+      <input
+        [(ngModel)]="user.username"
+        [ngClass]="{
+          'is-invalid': userUsername.errors && userUsername.touched
+        }"
+        type="text"
+        class="form-control"
+        name="username"
+        #userUsername="ngModel"
+        required
+        minlength="2"
+      />
+      <div [hidden]="!userUsername.errors?.required" class="invalid-feedback">
+        Username is required.
+      </div>
+      <div [hidden]="!userUsername.errors?.minlength" class="invalid-feedback">
+        Username must be a minimum of 2 characters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input
+        [(ngModel)]="user.password"
+        [ngClass]="{
+          'is-invalid': userPassword.errors && userPassword.touched
+        }"
+        type="text"
+        class="form-control"
+        name="password"
+        #userPassword="ngModel"
+        required
+        minlength="7"
+      />
+      <div [hidden]="!userPassword.errors?.required" class="invalid-feedback">
+        Password is required.
+      </div>
+      <div [hidden]="!userPassword.errors?.minlength" class="invalid-feedback">
+        Password must be a minimum of 7 characters.
+      </div>
+    </div>
+    <button
+      [disabled]="!userForm.form.valid"
+      class="btn btn-block btn-dark mb-2"
+      type="submit"
+    >
+      login
+    </button>
+  </form>
+</div>
